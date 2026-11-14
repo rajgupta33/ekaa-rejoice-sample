@@ -1,0 +1,28 @@
+:root {
+  --color-ink: #241d28;
+  --color-ink-soft: #5d5260;
+  --color-ivory: #fffdf9;
+  --color-cream: #f8f0e7;
+  --color-copper: #a65336;
+  --color-copper-dark: #873f26;
+  --color-coral: #f27c75;
+  --color-apricot: #f5b56a;
+  --color-orchid: #baa5e9;
+  --color-lagoon: #5aa7a5;
+  --color-stroke: #ebddd6;
+
+  --gradient-sunset: linear-gradient(110deg, #f27c75 0%, #f5b56a 52%, #f4d7bd 100%);
+  --gradient-pearl: radial-gradient(circle at 25% 30%, rgba(246, 178, 193, 0.58), transparent 42%),
+    radial-gradient(circle at 78% 62%, rgba(186, 165, 233, 0.38), transparent 46%),
+    #fffdf9;
+  --gradient-afterglow: linear-gradient(135deg, #a65336 0%, #db7f6f 48%, #bba7e8 100%);
+
+  --radius-card-mobile: 22px;
+  --radius-card: 28px;
+  --radius-pill: 999px;
+  --content-max: 1380px;
+  --easing-premium: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --shadow-soft: 0 14px 40px -16px rgba(36, 29, 40, 0.12);
+  --shadow-elevated: 0 24px 60px -20px rgba(36, 29, 40, 0.18);
+}

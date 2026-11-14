@@ -1,0 +1,155 @@
+@import "tailwindcss";
+@import "../styles/tokens.css";
+
+@theme {
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --color-ink: #241d28;
+  --color-ink-soft: #5d5260;
+  --color-ivory: #fffdf9;
+  --color-cream: #f8f0e7;
+  --color-copper: #a65336;
+  --color-copper-dark: #873f26;
+  --color-coral: #f27c75;
+  --color-apricot: #f5b56a;
+  --color-orchid: #baa5e9;
+  --color-lagoon: #5aa7a5;
+  --color-stroke: #ebddd6;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-ivory);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-ivory);
+  color: var(--color-ink);
+  overflow-x: clip;
+}
+
+/* Subtle tactile film grain overlay for art-directed editorial depth */
+.editorial-grain {
+  background-image: radial-gradient(rgba(36, 29, 40, 0.035) 1px, transparent 0);
+  background-size: 20px 20px;
+}
+
+.bg-sunset-silk {
+  background: var(--gradient-sunset);
+}
+
+.bg-pearl-glow {
+  background: var(--gradient-pearl);
+}
+
+.bg-afterglow {
+  background: var(--gradient-afterglow);
+}
+
+/* Container rhythm matching blueprint: min(100% - 32px, 1380px) */
+.container-atelier {
+  width: min(100% - 28px, var(--content-max));
+  margin-inline: auto;
+}
+
+@media (min-width: 640px) {
+  .container-atelier {
+    width: min(100% - 48px, var(--content-max));
+  }
+}
+
+/* Hero Ken Burns gentle scale 1.00 -> 1.07 over 7s */
+@keyframes kenBurnsZoom {
+  0% {
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: scale(1.07) translate3d(-1.2%, -0.5%, 0);
+  }
+}
+
+@keyframes kenBurnsZoomMobile {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.06);
+  }
+}
+
+.hero-ken-burns {
+  animation: kenBurnsZoomMobile 7s var(--easing-premium) forwards;
+}
+
+@media (min-width: 768px) {
+  .hero-ken-burns {
+    animation: kenBurnsZoom 7s var(--easing-premium) forwards;
+  }
+}
+
+@keyframes heroTextRise {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-reveal {
+  animation: heroTextRise 620ms var(--easing-premium) both;
+}
+
+.hero-reveal-delay-1 {
+  animation: heroTextRise 620ms var(--easing-premium) 95ms both;
+}
+
+.hero-reveal-delay-2 {
+  animation: heroTextRise 620ms var(--easing-premium) 190ms both;
+}
+
+@keyframes floatSculpted {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(0, -7px, 0) rotate(2.5deg);
+  }
+}
+
+.animate-sculpted {
+  animation: floatSculpted 7.5s ease-in-out infinite;
+}
+
+/* Hide scrollbars cleanly for horizontal mobile filter strips */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Focus visibility for WCAG 2.2 AA */
+:focus-visible {
+  outline: 2px solid var(--color-copper);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
