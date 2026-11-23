@@ -6,7 +6,7 @@ export const SITE_CONFIG = {
   tagline: "Beautifully imagined. Thoughtfully brought to life.",
   descriptor: "Event Styling & Celebrations in Dubai",
   // Replace with verified production URL before launch
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://ekaa.me/rejoice",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://ekaa-rejoice.com",
   locationLabel: "Dubai, United Arab Emirates",
   instagramHandle: "@ekaa_rejoice",
   instagramUrl: "https://www.instagram.com/ekaa_rejoice/",

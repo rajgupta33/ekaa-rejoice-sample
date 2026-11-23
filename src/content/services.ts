@@ -20,7 +20,7 @@ export const SERVICE_FILTER_TABS: { id: ServiceCategory; label: string }[] = [
   { id: "birthdays", label: "Birthdays" },
   { id: "styling", label: "Decor & Balloons" },
   { id: "corporate", label: "Corporate" },
-  { id: "production", label: "Lighting & Furniture" },
+  { id: "production", label: "Entertainment & Setup" },
 ];
 
 export const QUICK_OFFER_STRIP = [
@@ -123,12 +123,12 @@ export const SERVICES: ServiceItem[] = [
     category: "production",
     categoryLabel: "Experiences",
     description:
-      "Engaging entertainment concepts suited to keep every celebration alive.",
+      "Invite a teddy bear mascot to your party for greetings, dancing and photos with your guests.",
     image: "/imagery/services/entertainment.webp",
     imageAlt:
       "Evening celebration table aglow with candlelight, champagne glasses, and joyful guests beneath festive balloon styling",
     whatsappLabel: "Explore Entertainment",
-    whatsappService: "Entertainment",
+    whatsappService: "Party entertainment and teddy bear mascots",
     verifiedForPublication: true,
     featured: true,
     relatedWorkFilter: "birthdays",

@@ -82,15 +82,14 @@ export function WorkGallery({
         <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#A65336] sm:text-xs">
-              The Joy, in Frames
+              Ekaa Rejoice
             </p>
             <h2 className="mt-2.5 font-display text-[clamp(2.2rem,6vw,4.35rem)] font-medium leading-[1.06] tracking-[-0.015em] text-[#241D28]">
-              Seen. Felt. Remembered.
+              Our work
             </h2>
           </div>
           <p className="max-w-md text-[15px] leading-relaxed text-[#5D5260]">
-            Curated visual moodboards and styling studies—tap any frame to view
-            the story and enquire about a similar direction.
+            Explore photos from our celebrations and event setups. Select a photo to see the details or plan something similar.
           </p>
         </div>
 
@@ -209,7 +208,7 @@ export function WorkGallery({
                 alt={activeItem.imageAlt}
                 fill
                 sizes="(max-width: 768px) 100vw, 60vw"
-                className="object-cover"
+                className="object-contain"
               />
             </div>
 
